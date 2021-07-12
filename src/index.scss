@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Authen{
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+}
+
+.Login{
+    margin-bottom: 40px;
+}
+
+.header{
+    width: 100%;
+    background-color: #3371fb;
+    display: flex;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+    
+
+    &--Btn_block{
+        position: absolute;
+        right: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    &--button{
+        cursor: pointer;
+        margin-left: 10px;
+        border: none;
+        background-color: #3371fb;
+        color: white;
+        font-size: 20px;
+
+    }
+}
+
+.Password{
+    margin-bottom: 20px;
+}
+
+.Post--list{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         
+}
+
+.Post{
+    text-align: left;
+    box-shadow: 0 0 10px #000000;
+    margin-bottom: 50px;
+    width: 600px;
+    padding: 20px;
+    
+    &--text{
+        margin-bottom: 10px;
+    }
+    
+    
+    &--header{
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    &--Clap{
+        display: flex;
+        align-items: center;
+        background-color: #eaeaea;
+        width: 80px;
+        padding: 5px;
+        margin-left: 475px;
+    }
+
+    &--Clap__Btn{
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin-right: 15px;
+    }
+    
+    &--Edit{
+        display: flex;
+        margin-left: 334px;
+        &__Text,  &__Delete{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background-color: #eaeaea;
+            margin-left: 10px;
+            padding: 5px;
+
+        }
+    }
+    
+}

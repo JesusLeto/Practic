@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "writer@mail.com",
+      "password": 123456,
+      "role": "writer"
+    },
+    {
+      "id": 2,
+      "login": "reader@mail.com",
+      "password": 123456,
+      "role": "reader"
+    },
+    {
+      "id": 3,
+      "login": "writer2@mail.com",
+      "password": 123456,
+      "role": "writer"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Название поста",
+      "description": "1",
+      "claps": 85,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Название поста2",
+      "description": "Текст2",
+      "claps": 31,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 3
+    }
+  ]
+}
