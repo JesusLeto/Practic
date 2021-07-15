@@ -21,22 +21,58 @@
   ],
   "posts": [
     {
-      "id": 1,
-      "title": "Название поста",
-      "description": "1",
-      "claps": 85,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
-      "userId": 1
+      "title": "First post lol",
+      "description": "asdasdad",
+      "claps": 30,
+      "userId": 1,
+      "createdAt": "2021-07-14T10:21:54.997Z",
+      "updateAt": "2021-07-15T21:50:29.303Z",
+      "id": 13
     },
     {
-      "id": 2,
-      "title": "Название поста2",
-      "description": "Текст2",
-      "claps": 31,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
-      "userId": 3
+      "title": "Lasted post",
+      "description": "13123",
+      "claps": 18,
+      "userId": 1,
+      "createdAt": "2021-07-15T10:59:20.266Z",
+      "updateAt": "2021-07-14T21:59:20.266Z",
+      "id": 30
+    },
+    {
+      "title": "FAMFLADK;FLADKHFLJ",
+      "description": "F.,ad?fADFA,.AF",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-15T15:31:09.693Z",
+      "updateAt": "2021-07-15T15:31:09.693Z",
+      "id": 32
+    },
+    {
+      "title": "1",
+      "description": "1",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-15T21:34:46.365Z",
+      "updateAt": "2021-07-15T21:34:46.366Z",
+      "id": 34
+    },
+    {
+      "title": "2",
+      "description": "2",
+      "claps": 1,
+      "userId": 1,
+      "createdAt": "2021-07-15T21:34:49.542Z",
+      "updateAt": "2021-07-15T22:05:34.845Z",
+      "id": 35
+    },
+    {
+      "title": "Hello-5",
+      "description": "5",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-15T21:34:58.662Z",
+      "updateAt": "2021-07-15T21:59:21.715Z",
+      "id": 38
     }
   ]
 }

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+
+
+
 .Authen{
     width: 400px;
     height: 400px;
@@ -18,8 +21,17 @@
     background-color: white;
 }
 
-.Login{
+input.Login::-webkit-input-placeholder {color:white ; opacity:0.8;}/* webkit */
+input.Password::-webkit-input-placeholder {color:white ; opacity:0.8;}/* webkit */
+
+.Login, .Password{
+    background-color: #3371fb;
+    color: white;
+    font-size: 20px;
     margin-bottom: 40px;
+    height: 50px;
+    padding: 10px;
+    border: none;
 }
 
 .header{
@@ -48,6 +60,21 @@
         font-size: 20px;
 
     }
+}
+
+.AddNewPage--Btn{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 4px solid #A5A5A5,;
+    color: #A5A5A5;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    right: 10px;
 }
 
 .Password{
