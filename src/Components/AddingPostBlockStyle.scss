@@ -21,18 +21,12 @@
         height: 40px;
         margin-bottom: 10px;
     }
-    &__Btn{
-        cursor: pointer;
-        display: block;
-        width: 90px;
-        height: 45px;
-        margin-top: 20px;
-        margin-left: 510px;
-        border: none;
-        background-color:#3371fb;
-        color: white;
-        font-size: 20px;
+    &__Btn, &__CloseBtn{
+        display: inline-block;
+        margin: 20px 10px 0 10px;
+        // margin-left: 510px;
     }
+    
     &__input{
         width: 100%;
         height: 50%;

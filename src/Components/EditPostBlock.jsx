@@ -18,7 +18,9 @@ const EditPostBlock = ({PostForUpdate, NewUpdate, CloseEditPostBlock}) => {
     return(
         <div className = "Wrapper--Edit--block">
             <div className="Edit--block">
+                <div>Залоголовок</div>
                 <input type="text" className = "Edit--block__tile" value = {PostEditTitle} onChange = {e => setPostEditTitle(e.target.value)} />
+                <div>Пост</div>
                     <textarea className = "Edit--block__input" value = {PostEditText} onChange = {e => setPostEditText(e.target.value)} ></textarea>
                     <button className = "Edit--block__Btn--Update" onClick = {()=> {
                                 if(PostEditTitle&&PostEditText)
@@ -26,7 +28,7 @@ const EditPostBlock = ({PostForUpdate, NewUpdate, CloseEditPostBlock}) => {
                                     else{
                                         alert("Empty input")
                                     }}}>Изменить</button>
-                    <button className = "Edit--block__Btn--Cancer" onClick = {CloseEditPostBlock}>Отмена</button>
+                    <button className = "Edit--block__Btn--Close" onClick = {CloseEditPostBlock}>Отмена</button>
             </div>
 
         </div>

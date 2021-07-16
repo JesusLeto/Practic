@@ -9,7 +9,7 @@ const AddClap = (Post, NewLike) => {
             .then(({data})=> NewLike(data.claps))
 }
        
-const ShowTimeCreatedAndUpdate = (DateCreated) => {
+const ShowTimeCreated = (DateCreated) => {
    const interval =  Math.floor((new Date () - new Date(DateCreated))/ 86400000)
    if(interval === 0)
     return "Сегодня"
@@ -50,7 +50,7 @@ const Post = ({DB, RoleUser, User, NewLike, PostForUpdate}) =>{
                             <PostDelete PostDeleteId = {Post.id} NewLike = {CheckDelete => NewLike(CheckDelete)} />
                             </div>
                             :null} 
-                            <div className="LastUpdate">{ShowTimeCreatedAndUpdate(Post.createdAt)}</div>
+                            <div className="LastUpdate">{ShowTimeCreated(Post.createdAt)}</div>
                         
                         </div>
                     )

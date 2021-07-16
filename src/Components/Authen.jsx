@@ -66,12 +66,12 @@ const Authen = ({CloseForm, SingIn}) => {
             value = {PasswordUser} onChange = {e => {setPasswordUser(e.target.value); setPasswordBlur(false); LengthPass(e.target.value)} }
             onBlur = {e => SetBlur(e)}/>
 
-            <button onClick = {() => {
+            <button className = " Authen--Btn__SingUp" onClick = {() => {
                 CloseForm();
                 SingIn({"login": LoginUser, "password": PasswordUser})
 
-            }} disabled = {LoginError || PasswordError} >Sing Up</button>
-            <button onClick = {CloseForm} >Exit</button>
+            }} disabled = {LoginError || PasswordError} >Войти</button>
+            <button className = " Authen--Btn__Close" onClick = {CloseForm} >Отмена</button>
 
         </div>
         
