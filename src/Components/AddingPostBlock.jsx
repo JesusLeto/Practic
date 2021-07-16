@@ -7,7 +7,6 @@ const AddingPostBlock = ({WriterId, NewPost, CloseAddingBlock}) =>{
     const [TextNewPost, setTextNewPage] = useState("")
     const [TitleNewPost, setTitleNewPost] = useState("")
 
-    // --------------------Add New Post --------------------
     const AddNewPost = (TitleNewPost,TextNewPost,WriterId) =>{
         if(TitleNewPost&&TextNewPost)
         {

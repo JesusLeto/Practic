@@ -5,6 +5,7 @@ import Authen from './Components/Authen';
 import Post from './Components/Post';
 import AddingPostBlock from './Components/AddingPostBlock';
 import SelectSort from './Components/SelectSort';
+import EditPostBlock from './Components/EditPostBlock';
 
 
  function App() {
@@ -24,6 +25,7 @@ import SelectSort from './Components/SelectSort';
   const [Fetching, setFetching] = useState(true)
   const [TotalCount, setTotalCount] = useState(0)
   const [ChangeSort, setChangeSort] = useState(null)
+  const [PostForUpdate,setPostForUpdate] = useState(null)
   const [UpdatedPost,setUpdatedPost] = useState(null)
 
   console.log(NewLike)
@@ -91,19 +93,33 @@ import SelectSort from './Components/SelectSort';
           }
         </div>
      </div>
-{/* ------------------------------------------------------ */}
-    
-      <SelectSort setSort = {(newPropertySort, newKindSort) => {setPropertySort(newPropertySort); setKindSort(newKindSort)}}/>
 
-{/* ------------------------------------------------------ */}
-     {User?.role === 'writer' ? <div className = "AddNewPage--Btn" onClick = {() => setShowAddingBlock(true)}>Создать пост</div>: null}
+        {/* ----------------------------Выбор метода сортировки---------------------------- */}
+    <SelectSort setSort = {(newPropertySort, newKindSort) => {setPropertySort(newPropertySort); setKindSort(newKindSort)}}/>
 
-     {ShowAddingBlock ? <AddingPostBlock WriterId = {User.id} NewPost = {Post => setNewPost(Post)} CloseAddingBlock = {() => setShowAddingBlock(false)}/>: null}
 
-     {ShowSingIn && <Authen CloseForm = {() => setShowSingIn(false)} SingIn = {User => setCheckUser(User)}/>}
+    {User?.role === 'writer' ? <div className = "AddNewPage--Btn" onClick = {() => setShowAddingBlock(true)}>Создать пост</div>: null}
+
+      {/* ----------------------------Блок добавления поста---------------------------- */}
+    {ShowAddingBlock ? <AddingPostBlock  WriterId = {User.id} 
+                                          NewPost = {Post => setNewPost(Post)} 
+                                          CloseAddingBlock = {() => setShowAddingBlock(false)}/>: null}
+
+      {/* ----------------------------Блок аутентификации---------------------------- */}
+    {ShowSingIn && <Authen CloseForm = {() => setShowSingIn(false)} SingIn = {User => setCheckUser(User)}/>}
      
-     
-     <Post DB = {DB} RoleUser = {User?.role} User = {User} NewLike = {(CountClaps) => {setNewLike(CountClaps)}} NewUpdate = {NewUpdate => setUpdatedPost(NewUpdate)}/>
+      {/* ----------------------------Посты---------------------------- */}
+    <Post DB = {DB} 
+          RoleUser = {User?.role} 
+          User = {User} 
+          NewLike = {Like => setNewLike(Like)} 
+          PostForUpdate = {PostObj => setPostForUpdate(PostObj)} />
+
+      {/* ----------------------------Блок изменения поста---------------------------- */}
+    {PostForUpdate ? <EditPostBlock PostForUpdate = {PostForUpdate} 
+                                      NewUpdate = {NewUpdate => setUpdatedPost(NewUpdate)} 
+                                      CloseEditPostBlock = {()=> setPostForUpdate(null)}/> 
+                                      : null}
 
     </div>
   );

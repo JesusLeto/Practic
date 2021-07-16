@@ -1,9 +1,9 @@
 import React from 'react'
 import {TiEdit} from 'react-icons/ti'
 
-const PostEdit = ({Post, PostEditId, PostEditText,PostEditTitle}) => {
+const PostEdit = ({Post, PostForUpdate}) => {
     return(
-        <div className="Post--Edit__Text" onClick = {() => {PostEditId(Post.id); PostEditText(Post.description); PostEditTitle(Post.title)}}> 
+        <div className="Post--Edit__Text" onClick = {() => {PostForUpdate(Post)}}> 
         <TiEdit size = "2em" color = "#3371fb"/>
         <span >Изменить</span>
         </div>

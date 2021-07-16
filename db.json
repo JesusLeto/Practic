@@ -26,7 +26,7 @@
       "claps": 30,
       "userId": 1,
       "createdAt": "2021-07-14T10:21:54.997Z",
-      "updateAt": "2021-07-15T21:50:29.303Z",
+      "updatedAt": "2021-07-15T21:50:29.303Z",
       "id": 13
     },
     {
@@ -35,44 +35,89 @@
       "claps": 18,
       "userId": 1,
       "createdAt": "2021-07-15T10:59:20.266Z",
-      "updateAt": "2021-07-14T21:59:20.266Z",
+      "updatedAt": "2021-07-14T21:59:20.266Z",
       "id": 30
     },
     {
-      "title": "FAMFLADK;FLADKHFLJ",
-      "description": "F.,ad?fADFA,.AF",
+      "title": "Googl",
+      "description": "3:11",
       "claps": 0,
       "userId": 1,
       "createdAt": "2021-07-15T15:31:09.693Z",
-      "updateAt": "2021-07-15T15:31:09.693Z",
+      "updatedAt": "2021-07-16T00:10:49.128Z",
       "id": 32
     },
     {
       "title": "1",
-      "description": "1",
+      "description": "3:10",
       "claps": 0,
       "userId": 1,
       "createdAt": "2021-07-15T21:34:46.365Z",
-      "updateAt": "2021-07-15T21:34:46.366Z",
+      "updatedAt": "2021-07-16T00:10:42.608Z",
       "id": 34
     },
     {
       "title": "2",
-      "description": "2",
+      "description": "3:12",
       "claps": 1,
       "userId": 1,
       "createdAt": "2021-07-15T21:34:49.542Z",
-      "updateAt": "2021-07-15T22:05:34.845Z",
+      "updatedAt": "2021-07-16T00:10:56.463Z",
       "id": 35
     },
     {
       "title": "Hello-5",
-      "description": "5",
+      "description": "51",
       "claps": 0,
       "userId": 1,
       "createdAt": "2021-07-15T21:34:58.662Z",
-      "updateAt": "2021-07-15T21:59:21.715Z",
+      "updatedAt": "2021-07-16T00:06:06.025Z",
       "id": 38
+    },
+    {
+      "title": "Post 3:29",
+      "description": "adasd",
+      "claps": 16,
+      "userId": 1,
+      "createdAt": "2021-07-16T00:29:39.981Z",
+      "updateAt": "2021-07-16T00:29:39.981Z",
+      "id": 39
+    },
+    {
+      "title": "12",
+      "description": "12",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-16T00:44:17.733Z",
+      "updateAt": "2021-07-16T00:44:17.733Z",
+      "id": 40
+    },
+    {
+      "title": "123",
+      "description": "123",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-16T00:44:21.237Z",
+      "updateAt": "2021-07-16T00:44:21.237Z",
+      "id": 41
+    },
+    {
+      "title": "1234",
+      "description": "12314",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-16T00:44:25.013Z",
+      "updateAt": "2021-07-16T00:44:25.013Z",
+      "id": 42
+    },
+    {
+      "title": "1351252",
+      "description": "235252451",
+      "claps": 0,
+      "userId": 1,
+      "createdAt": "2021-07-16T00:44:29.250Z",
+      "updateAt": "2021-07-16T00:44:29.250Z",
+      "id": 43
     }
   ]
 }
