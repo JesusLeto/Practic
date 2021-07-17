@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import axios from 'axios';
-import './EditPostBlockStyle.scss';
+import '../style/EditPostBlockStyle.scss';
+
 
 const EditPost = (PostEditId,PostEditTitle,PostEditText,NewUpdate,CloseEditPostBlock) =>{
-    axios.patch("http://localhost:3001/posts/" + PostEditId,{
+    axios.patch(process.env.REACT_APP_DB_CONN + "/posts/" + PostEditId,{
         title: PostEditTitle, 
         description: PostEditText,
-        updatedAt: new Date()})
+        updateAt: new Date()})
         .then(() => {NewUpdate(Math.random()); CloseEditPostBlock()})
 }
 

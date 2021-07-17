@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import './AddingPostBlockStyle.scss'
+import '../style/AddingPostBlockStyle.scss'
 
 const AddingPostBlock = ({WriterId, NewPost, CloseAddingBlock}) =>{
 

@@ -4,8 +4,9 @@ import {FaHandsHelping} from 'react-icons/fa'
 import PostDelete from './PostDelete';
 import PostEdit from './PostEdit';
 
+
 const AddClap = (Post, NewLike) => {
-    axios.patch("http://localhost:3001/posts/" + Post.id, {claps: Post.claps + 1,})
+    axios.patch(process.env.REACT_APP_DB_CONN + "/posts/" + Post.id, {claps: Post.claps + 1,})
             .then(({data})=> NewLike(data.claps))
 }
        

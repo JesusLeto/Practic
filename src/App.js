@@ -8,9 +8,9 @@ import SelectSort from './Components/SelectSort';
 import EditPostBlock from './Components/EditPostBlock';
 
 
+
  function App() {
 
-  console.log("RERENDER")
 
   const [ShowSingIn, setShowSingIn] = useState(false)
   const [CheckUser, setCheckUser] = useState(null)
@@ -28,25 +28,19 @@ import EditPostBlock from './Components/EditPostBlock';
   const [PostForUpdate,setPostForUpdate] = useState(null)
   const [UpdatedPost,setUpdatedPost] = useState(null)
 
-  console.log(NewLike)
 
-  //--------------------В useEffect 1 изменяет стейты не одновременно--------------------
 
   useEffect(()=>{
-    console.log("UseEffect 1")
-    if(Fetching)
-      axios.get(`http://localhost:3001/posts?_expand=user&_sort=${PropertySort}&_order=${KindSort}&_limit=10&_page=${NumberPage}`)
-      .then((responce) => {setDB([...DB,...responce.data]); setNumberPage(prev => prev + 1); setTotalCount(responce.headers['x-total-count'])})
-              .finally(() => setFetching(false))         
-  },[ChangeSort,Fetching])
-
-  useEffect(()=> {
-    if(NewLike || NewPost || UpdatedPost)
-      axios.get(`http://localhost:3001/posts?_expand=user&_sort=${PropertySort}&_order=${KindSort}&_limit=${(NumberPage-1)*10}`) //ПОФИКСИИИИТЬ
-      .then(({data}) => setDB(data))
-  },[NewLike,NewPost,UpdatedPost])
-
-  // --------------------------------------------------------------------------------
+        axios.get(process.env.REACT_APP_DB_CONN + `/posts?_expand=user&_sort=${PropertySort}&_order=${KindSort}&_limit=${Fetching? 10:(NumberPage-1)*10 }&_page=${Fetching? NumberPage: ""}`)
+        .then((responce) => {if(Fetching){
+                          setDB([...DB,...responce.data]); 
+                          setNumberPage(prev => prev + 1); 
+                          setTotalCount(responce.headers['x-total-count'])}
+                        else{
+                          setDB(responce.data)
+                        }})
+                .finally(() => setFetching(false))         
+    },[Fetching,NewLike,NewPost,UpdatedPost])
 
   useEffect(() => {
     if(PropertySort != 'createdAt' || KindSort != 'desc' || ChangeSort!=null){
@@ -57,16 +51,13 @@ import EditPostBlock from './Components/EditPostBlock';
     }
   },[PropertySort,KindSort])
 
-
   useEffect( ()=>{
-    console.log("UseEffect 2")
     if(CheckUser)
-      axios.get(`http://localhost:3001/users?login=${CheckUser.login}&password=${CheckUser.password}`)
+      axios.get(process.env.REACT_APP_DB_CONN + `/users?login=${CheckUser.login}&password=${CheckUser.password}`)
         .then(({data})=> data.length !== 0 ? setUser(data[0]) : console.log("User not found"))
   },[CheckUser])
 
   useEffect(() => {
-    console.log("UseEffect 3")
     document.addEventListener('scroll', scrollHadler)
     return function() {
       document.removeEventListener('scroll', scrollHadler)
